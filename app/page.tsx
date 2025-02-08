@@ -262,7 +262,7 @@ export default function Home() {
                   <div>
                     <p className="text-sm text-muted-foreground">WhatsApp</p>
                     <a 
-                      href="https://wa.me/8008821571" 
+                      href="https://wa.me/+918008821571" 
                       target="_blank" 
                       rel="noopener noreferrer" 
                       className="text-foreground hover:text-green-600 transition-colors flex items-center space-x-1"
