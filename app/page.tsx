@@ -88,13 +88,12 @@ export default function Home() {
     <div className="min-h-screen bg-background">
 
       {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-20 pb-15 relative">
+      <section className="container mx-auto px-0 mb-0 pb-0 py-14 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{
       duration: 1,
-      // repeat: Infinity,
       repeatType: "loop",
       ease: "easeInOut",
     }}
@@ -105,10 +104,10 @@ export default function Home() {
       <img
         src="/assets/back.5.jpg"
         alt="Business Background"
-        className="w-full h-45 rounded-lg shadow-lg "
+        className="w-full h-full sm:h-72 md:h-80 object-cover rounded-lg shadow-lg"
       />
       {/* Overlay with Text */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 dark:bg-black/60 p-6 rounded-lg">
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 dark:bg-black/60 p-4 sm:p-6 rounded-lg">
         
         {/* Animated Heading */}
         <motion.h1
@@ -116,11 +115,10 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{
             duration: 1,
-            // repeat: Infinity,
             repeatType: "loop",
             ease: "easeInOut",
           }}
-          className="text-4xl md:text-6xl font-bold text-yellow-500 mb-4"
+          className="text-3xl sm:text-4xl md:text-6xl font-bold text-yellow-500 mb-0 pb-0"
         >
           Get Your Business On Top
         </motion.h1>
@@ -131,11 +129,10 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{
             duration: 1,
-            // repeat: Infinity,
             repeatType: "loop",
             ease: "easeInOut",
           }}
-          className="text-lg md:text-2xl text-white max-w-2xl mx-auto mb-8"
+          className="text-base sm:text-lg md:text-2xl text-white max-w-2xl mx-auto mb-8"
         >
           We create innovative digital solutions that help businesses grow and succeed in the modern world.
         </motion.p>
@@ -143,8 +140,6 @@ export default function Home() {
     </div>
   </motion.div>
 </section>
-
-
 
 
       {/* Search Section */}
