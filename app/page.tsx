@@ -103,7 +103,7 @@ export default function Home() {
     {/* Background Image */}
     <div className="relative w-full max-w-full mx-auto">
       <img
-        src="/assets/back4.jpg"
+        src="/assets/back.5.jpg"
         alt="Business Background"
         className="w-full h-45 rounded-lg shadow-lg "
       />
