@@ -1,0 +1,6 @@
+{
+    "editor.cursorStyle": "line",
+"editor.cursorBlinking": "blink",
+"editor.cursorWidth": 2,
+"editor.selectionHighlight": false
+}

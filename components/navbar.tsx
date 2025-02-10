@@ -43,7 +43,7 @@ export function Navbar() {
   return (
     <nav className="animate-fade-up fixed w-full bg-background/80 backdrop-blur-sm border-b z-50">
       <div className="animate-fade-up container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <div className="flex-shrink-0">
     <img src="/assets/logo.jpg" alt="logo" className="w-32 h-auto" />
@@ -61,25 +61,25 @@ export function Navbar() {
                 {item.label}
               </a>
             ))}
-            <Button
+            {/* <Button
               variant="ghost"
               size="icon"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              onClick={() => setTheme(theme === 'dark' ? 'lig' : 'dark')}
             >
               {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-            </Button>
+            </Button> */}
           </div>
 
           {/* Mobile Menu Button */}
           <div className="animate-fade-up md:hidden flex items-center">
-            <Button
+            {/* <Button
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="mr-2"
             >
               {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-            </Button>
+            </Button> */}
             <Button
               variant="ghost"
               size="icon"
