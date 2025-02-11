@@ -64,7 +64,7 @@ export function Navbar() {
             {/* <Button
               variant="ghost"
               size="icon"
-              onClick={() => setTheme(theme === 'dark' ? 'lig' : 'dark')}
+              onClick={() => setTheme(theme === 'dark' ? 'dark' : 'dark')}
             >
               {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button> */}
@@ -75,7 +75,7 @@ export function Navbar() {
             {/* <Button
               variant="ghost"
               size="icon"
-              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              onClick={() => setTheme(theme === 'dark' ? 'dark' : 'dark')}
               className="mr-2"
             >
               {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
