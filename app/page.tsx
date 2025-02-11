@@ -104,7 +104,7 @@ export default function Home() {
       <img
         src="/assets/back.5.jpg"
         alt="Business Background"
-        className="w-full h-40 sm:h-56 md:h-72 object-cover rounded-lg shadow-lg"
+        className="w-full h-40 sm:h-56 md:h-72 object-cover mt-7 rounded-lg shadow-lg"
       />
       {/* Overlay with Text */}
       <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 dark:bg-black/60 p-2 sm:p-4 md:p-6 rounded-lg">
