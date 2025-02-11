@@ -88,7 +88,7 @@ export default function Home() {
     <div className="min-h-screen bg-background">
 
       {/* Hero Section */}
-      <section className="container mx-auto px-0 mb-0 pb-0 py-14 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
+<section className="container mx-auto px-2 mb-0 pb-0 py-8 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white">
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -100,15 +100,14 @@ export default function Home() {
     className="relative text-center"
   >
     {/* Background Image */}
-    <div className="relative w-full max-w-full mx-auto">
+    <div className="relative w-full mx-auto">
       <img
         src="/assets/back.5.jpg"
         alt="Business Background"
-        className="w-full h-full sm:h-72 md:h-80 object-cover rounded-lg shadow-lg"
+        className="w-full h-40 sm:h-56 md:h-72 object-cover rounded-lg shadow-lg"
       />
       {/* Overlay with Text */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 dark:bg-black/60 p-4 sm:p-6 rounded-lg">
-        
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/50 dark:bg-black/60 p-2 sm:p-4 md:p-6 rounded-lg">
         {/* Animated Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
@@ -118,7 +117,7 @@ export default function Home() {
             repeatType: "loop",
             ease: "easeInOut",
           }}
-          className="text-3xl sm:text-4xl md:text-6xl font-bold text-yellow-500 mb-0 pb-0"
+          className="text-xl sm:text-3xl md:text-5xl font-bold text-yellow-500 mb-2"
         >
           Get Your Business On Top
         </motion.h1>
@@ -132,7 +131,7 @@ export default function Home() {
             repeatType: "loop",
             ease: "easeInOut",
           }}
-          className="text-base sm:text-lg md:text-2xl text-white max-w-2xl mx-auto mb-8"
+          className="text-sm sm:text-lg md:text-2xl text-white max-w-xs sm:max-w-md md:max-w-2xl mx-auto"
         >
           We create innovative digital solutions that help businesses grow and succeed in the modern world.
         </motion.p>
@@ -140,6 +139,7 @@ export default function Home() {
     </div>
   </motion.div>
 </section>
+
 
 
       {/* Search Section */}
@@ -220,142 +220,191 @@ export default function Home() {
 
 
 
-      {/* Contact Section */}
-      <section id="contact" className="container mx-auto px-4 py-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-300 text-white">
-        <h2 className="text-4xl sm:text-5xl font-bold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-cyan-500">Get in Touch</h2>
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* Contact Form */}
-          <div className="bg-card/80 dark:bg-card/40 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-border/50 ">
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-sm font-medium mb-2 text-gray-200">Name</label>
-                  <Input type="text" placeholder="Your name" className="focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-transparent text-white border border-white/40 rounded-lg p-2" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2 text-gray-200">Email</label>
-                  <Input type="email" placeholder="your@email.com" className="focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-transparent text-white border border-white/40 rounded-lg p-2" />
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium mb-2 text-gray-200">Message</label>
-                <textarea
-                  className="focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-transparent text-white border border-white/40 rounded-lg p-2 w-full h-40"
-                  placeholder="Your message..."
-                ></textarea>
-              </div>
-              <Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:opacity-90 text-white">
-                Send Message
-                <MessageSquare className="ml-2 h-4 w-4" />
-              </Button>
-            </form>
+     {/* Contact Section */}
+<section id="contact" className="max-w-full px-2 md:px-4 py-8 md:py-16 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-300 text-white">
+  <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-center mb-6 md:mb-12 text-transparent bg-clip-text bg-gradient-to-r from-yellow-500 to-cyan-500">
+    Get in Touch
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+    {/* Contact Form */}
+    <div className="bg-card/80 dark:bg-card/40 backdrop-blur-sm rounded-2xl shadow-xl p-4 md:p-8 border border-border/50">
+      <form className="space-y-4 md:space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <div>
+            <label className="block text-xs sm:text-sm font-medium mb-2 text-gray-200">
+              Name
+            </label>
+            <Input
+              type="text"
+              placeholder="Your name"
+              className="focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-transparent text-white border border-white/40 rounded-lg p-2"
+            />
           </div>
-
-          {/* Contact Details and Social Media */}
-          <div className="space-y-8">
-            {/* Contact Information */}
-            <div className="bg-card/80 dark:bg-card/40 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-border/50 transform hover:scale-[1.02] transition-transform ">
-              <h3 className="text-xl font-semibold mb-6 bg-gradient-to-r from-pink-600 to-yellow-400 text-transparent bg-clip-text">Contact Information</h3>
-              <div className="space-y-4">
-                <motion.div
-                  whileHover={{ x: 5 }}
-                  className="flex items-center space-x-3"
-                >
-                  <div className="bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-600/20 dark:to-cyan-600/20 rounded-full p-2">
-                    <Mail className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-200">Email</p>
-                    <a href="mailto:contact@tabrez.studio" className="text-foreground hover:text-blue-600 transition-colors">
-                      imtabrez5@gmail.com<br />
-                    </a>
-                    <a href="mailto:contact@tabrez.studio" className="text-foreground hover:text-blue-600 transition-colors">
-                      sufiyanrazapathan51800@gmail.com
-                    </a>
-                  </div>
-                </motion.div>
-                <motion.div
-                  whileHover={{ x: 5 }}
-                  className="flex items-center space-x-3"
-                >
-                  <div className="bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-600/20 dark:to-cyan-600/20 rounded-full p-2">
-                    <Phone className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-200">Phone</p>
-                    <a href="tel:+1234567890" className="text-foreground hover:text-blue-600 transition-colors">
-                      Tabrez: +91 8008821571<br />
-                    </a>
-                    <a href="tel:+1234567890" className="text-foreground hover:text-blue-600 transition-colors">
-                      sufiyan: +91 9834426839
-                    </a>
-                  </div>
-                  <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 dark:from-green-500/20 dark:to-green-600/20 rounded-full p-2">
-                    <svg
-                      viewBox="0 0 24 24"
-                      className="h-5 w-5 text-green-600"
-                      fill="currentColor"
-                    >
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-200">WhatsApp</p>
-                    <a
-                      href="https://wa.me/+918008821571"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground hover:text-green-600 transition-colors flex items-center space-x-1"
-                    >
-                      <span>+91 8008821571</span>
-                      <ExternalLink className="h-4 w-4 opacity-50" />
-                    </a>
-                  </div>
-
-                </motion.div>
-                <motion.div
-                  whileHover={{ x: 5 }}
-                  className="flex items-center space-x-3"
-                >
-                  <div className="bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-600/20 dark:to-cyan-600/20 rounded-full p-2">
-                    <MapPin className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-200">Address</p>
-                    <p className="text-foreground">HIGHTECH CITY Hyderabad, Telangana 500032</p>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
-
-            {/* Social Media Links */}
-            <div className="bg-card/80 dark:bg-card/40 backdrop-blur-sm rounded-2xl shadow-xl p-8 border border-border/50 transform ">
-              <h3 className="text-xl font-semibold mb-6 bg-gradient-to-r from-yellow-500 to-pink-500 text-transparent bg-clip-text">Follow Us</h3>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { icon: Linkedin, name: 'LinkedIn', url: 'https://www.linkedin.com/in/mohammed-tabrez-156a3a19a?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B4dbRDZAhRPeCEOA%2Fba80Ww%3D%3D' },
-                  { icon: Twitter, name: 'Twitter', url: 'https://twitter.com' },
-                  { icon: Facebook, name: 'Facebook', url: 'https://facebook.com' },
-                  { icon: Instagram, name: 'Instagram', url: 'https://www.instagram.com/tabrez.studio?igsh=bHczYjhyMHA3aDAy' }
-                ].map((social) => (
-                  <motion.a
-                    key={social.name}
-                    whileHover={{ scale: 1.05, x: 5 }}
-                    href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-2 text-foreground hover:text-blue-600 transition-colors p-2 rounded-lg hover:bg-primary/5"
-                  >
-                    <social.icon className="h-5 w-5 text-white" />
-                    <span>{social.name}</span>
-                    <ExternalLink className="h-4 w-4 opacity-50" />
-                  </motion.a>
-                ))}
-              </div>
-            </div>
+          <div>
+            <label className="block text-xs sm:text-sm font-medium mb-2 text-gray-200">
+              Email
+            </label>
+            <Input
+              type="email"
+              placeholder="your@email.com"
+              className="focus:outline-none focus:ring-2 focus:ring-indigo-500 bg-transparent text-white border border-white/40 rounded-lg p-2"
+            />
           </div>
         </div>
-      </section>
+        <div>
+          <label className="block text-xs sm:text-sm font-medium mb-2 text-gray-200">
+            Message
+          </label>
+          <textarea
+            className="focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-transparent text-white border border-white/40 rounded-lg p-2 w-full h-32 md:h-40"
+            placeholder="Your message..."
+          ></textarea>
+        </div>
+        <Button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:opacity-90 text-white">
+          Send Message
+          <MessageSquare className="ml-2 h-4 w-4" />
+        </Button>
+      </form>
+    </div>
+
+    {/* Contact Details and Social Media */}
+    <div className="space-y-6 md:space-y-8">
+      {/* Contact Information */}
+      <div className="bg-card/80 dark:bg-card/40 backdrop-blur-sm rounded-2xl shadow-xl p-4 md:p-8 border border-border/50 transform hover:scale-[1.02] transition-transform">
+        <h3 className="text-lg sm:text-xl font-semibold mb-4 md:mb-6 bg-gradient-to-r from-pink-600 to-yellow-400 text-transparent bg-clip-text">
+          Contact Information
+        </h3>
+        <div className="space-y-3 md:space-y-4">
+          <motion.div
+            whileHover={{ x: 5 }}
+            className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-3"
+          >
+            <div className="bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-600/20 dark:to-cyan-600/20 rounded-full p-2">
+              <Mail className="h-5 w-5 text-white" />
+            </div>
+            <div>
+              <p className="text-xs sm:text-sm text-gray-200">Email</p>
+              <a
+                href="mailto:imtabrez5@gmail.com"
+                className="text-foreground hover:text-blue-600 transition-colors"
+              >
+                imtabrez5@gmail.com
+              </a>
+              <br />
+              <a
+                href="mailto:sufiyanrazapathan51800@gmail.com"
+                className="text-foreground hover:text-blue-600 transition-colors"
+              >
+                sufiyanrazapathan51800@gmail.com
+              </a>
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{ x: 5 }}
+            className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-3"
+          >
+            <div className="bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-600/20 dark:to-cyan-600/20 rounded-full p-2">
+              <Phone className="h-5 w-5 text-white" />
+            </div>
+            <div>
+              <p className="text-xs sm:text-sm text-gray-200">Phone</p>
+              <a
+                href="tel:+918008821571"
+                className="text-foreground hover:text-blue-600 transition-colors"
+              >
+                Tabrez: +91 8008821571
+              </a>
+              <br />
+              <a
+                href="tel:+919834426839"
+                className="text-foreground hover:text-blue-600 transition-colors"
+              >
+                Sufiyan: +91 9834426839
+              </a>
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{ x: 5 }}
+            className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-3"
+          >
+            <div className="bg-gradient-to-r from-green-500/10 to-green-600/10 dark:from-green-500/20 dark:to-green-600/20 rounded-full p-2">
+              {/* WhatsApp Icon */}
+              <svg
+                viewBox="0 0 24 24"
+                className="h-5 w-5 text-green-600"
+                fill="currentColor"
+              >
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-xs sm:text-sm text-gray-200">WhatsApp</p>
+              <a
+                href="https://wa.me/+918008821571"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground hover:text-green-600 transition-colors flex items-center space-x-1"
+              >
+                <span>+91 8008821571</span>
+                <ExternalLink className="h-4 w-4 opacity-50" />
+              </a>
+            </div>
+          </motion.div>
+          <motion.div
+            whileHover={{ x: 5 }}
+            className="flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-3"
+          >
+            <div className="bg-gradient-to-r from-blue-600/10 to-cyan-600/10 dark:from-blue-600/20 dark:to-cyan-600/20 rounded-full p-2">
+              <MapPin className="h-5 w-5 text-white" />
+            </div>
+            <div>
+              <p className="text-xs sm:text-sm text-gray-200">Address</p>
+              <p className="text-foreground">
+                HIGHTECH CITY Hyderabad, Telangana 500032
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Social Media Links */}
+      <div className="bg-card/80 dark:bg-card/40 backdrop-blur-sm rounded-2xl shadow-xl p-4 md:p-8 border border-border/50">
+        <h3 className="text-lg sm:text-xl font-semibold mb-4 md:mb-6 bg-gradient-to-r from-yellow-500 to-pink-500 text-transparent bg-clip-text">
+          Follow Us
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+          {[
+            {
+              icon: Linkedin,
+              name: 'LinkedIn',
+              url: 'https://www.linkedin.com/in/mohammed-tabrez-156a3a19a',
+            },
+            { icon: Twitter, name: 'Twitter', url: 'https://twitter.com' },
+            { icon: Facebook, name: 'Facebook', url: 'https://facebook.com' },
+            {
+              icon: Instagram,
+              name: 'Instagram',
+              url: 'https://www.instagram.com/tabrez.studio',
+            },
+          ].map((social) => (
+            <motion.a
+              key={social.name}
+              whileHover={{ scale: 1.05, x: 5 }}
+              href={social.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-2 text-foreground hover:text-blue-600 transition-colors p-2 rounded-lg hover:bg-primary/5"
+            >
+              <social.icon className="h-5 w-5 text-white" />
+              <span className="text-sm">{social.name}</span>
+              <ExternalLink className="h-4 w-4 opacity-50" />
+            </motion.a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
     </div>
   );
